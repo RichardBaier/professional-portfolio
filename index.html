@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./assets/styles.css">
     <title>Rick Baier</title>
 </head>
@@ -11,8 +12,7 @@
     <header>
         <a href="#" class="logo">Rick Baier</a>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Me</a></li>
+            <li><a href="#about-card">About Me</a></li>
             <li><a href="#">Projects</a></li>
             <li><a href="#">Skills</a></li>
             <li><a href="#">Contact Me</a></li>
@@ -62,17 +62,30 @@
         <span style="--i:28"></span>
     </div>
     <div class="container">
-            <div class="card" data-tilt id="about-card">
+        <section class="about-me">
+            <div id="about-card" data-tilt>
                 <div class="content">
                     <h1>About Me</h1>
                     <img src="./assets/img/profile.png">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper.</p>
                 </div>
             </div>
+        </section>
+        <section class="projects">
+            <div class="card" data-tilt>
+                <h1>Pokedex</h1>
+                <img src="./assets/img/pokedex.png">
+            </div>
+            <div class="card" data-tilt>
+                <h1>Pokedex</h1>
+                <img src="./assets/img/pokedex.png">
+            </div>
+        </section>
         </div>
     </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="./assets/js/vanila-tilt.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>
