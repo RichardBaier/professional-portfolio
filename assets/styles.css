@@ -166,6 +166,9 @@ header.sticky ul li a {
     display: flex;
     flex-direction: row;
 }
+.projects h2 {
+    color: white;
+}
 
 .card {
     color: white;
