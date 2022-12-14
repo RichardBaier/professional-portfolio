@@ -165,9 +165,14 @@ header.sticky ul li a {
     position: relative;
     display: flex;
     flex-direction: row;
+
 }
 .projects h2 {
     color: white;
+}
+
+.swiper {
+    width: 850px;
 }
 
 .card {
