@@ -172,13 +172,13 @@ header.sticky ul li a {
 }
 
 .swiper {
-    width: 850px;
+    width: 950px;
 }
 
 .card {
     color: white;
     width: 200px;
-    height: 380px;
+    height: 200px;
     margin: 30px;
     position: relative;
     display: flex;
