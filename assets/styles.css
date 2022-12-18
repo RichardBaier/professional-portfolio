@@ -25,11 +25,6 @@ header {
     z-index: 10000;
 }
 
-header.sticky {
-    padding: 5px 100px;
-    background: #fff;
-}
-
 header .logo {
     position: relative;
     font-weight: 700;
@@ -82,12 +77,8 @@ header ul li a:hover {
     align-items: center;
 }
 
-header.sticky .logo {
-    color: #000;
-}
-
-header.sticky ul li a {
-    color: #000;
+.sidebar {
+    display: none;
 }
 
 #about-card {
@@ -123,4 +114,46 @@ header.sticky ul li a {
 
 #about-card .content p {
     margin: 0 20px;
+}
+
+@media (max-width: 1100px) {
+    header {
+        display: none;
+    }
+
+    .banner {
+        margin-left: 100px;
+    }
+
+    #about-card {
+        width: 400px;
+        height: 600px;
+        margin-right: 75px;
+    }
+
+    i {
+        color: white;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        z-index: 110000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 240px;
+        background: #11101d;
+        padding: 6px 14px;
+    }
+
+    .sidebar .name-content .name {
+        color: #fff;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+    }
 }
