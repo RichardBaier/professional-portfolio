@@ -9,7 +9,7 @@
 
 body {
     background: #000;
-    min-height: 200vh;
+    min-height: 100vh;
 }
 
 header {
@@ -77,6 +77,9 @@ header ul li a:hover {
     height: 100vh;
     background: url(./img/background-banner.jpg);
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header.sticky .logo {
@@ -87,50 +90,10 @@ header.sticky ul li a {
     color: #000;
 }
 
-.bubbles {
-    position: relative;
-    display: flex;
-    z-index: -10;
-}
-
-.bubbles span {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    background: #4fc3dc;
-    margin: 0 4px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
-    animation: animate 15s linear infinite;
-    animation-duration: calc(125s / var(--i));
-}
-
-.bubbles span:nth-child(even) {
-    background: #f321c2;
-    box-shadow: 0 0 0 10px #f321c244, 0 0 50px #f321c2, 0 0 100px #f321c2;
-}
-
-@keyframes animate {
-    0% {
-        transform: translateY(150vh) scale(0);
-    }
-    100% {
-        transform: translateY(-10vh) scale(1);
-    }
-}
-
-.container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 #about-card {
     width: 800px;
     height: 400px;
-    margin: 30px;
+    margin: 50px 0 0 0;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     background:rgba(255, 255, 255, 0.1);
@@ -160,39 +123,4 @@ header.sticky ul li a {
 
 #about-card .content p {
     margin: 0 20px;
-}
-.projects {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-
-}
-.projects h2 {
-    color: white;
-}
-
-.swiper {
-    width: 950px;
-}
-
-.card {
-    color: white;
-    width: 200px;
-    height: 200px;
-    margin: 30px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    background:rgba(255, 255, 255, 0.1);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
-}
-
-.card img {
-    width: 80%;
 }
