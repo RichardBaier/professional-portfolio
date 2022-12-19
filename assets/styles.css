@@ -126,7 +126,7 @@ header ul li a:hover {
     }
 
     #about-card {
-        width: 400px;
+        width: 80%;
         height: 600px;
         margin-right: 75px;
     }
@@ -143,13 +143,96 @@ header ul li a:hover {
         top: 0;
         left: 0;
         height: 100%;
-        width: 240px;
+        width: 78px;
         background: #11101d;
         padding: 6px 14px;
+        transition: all 0.5s ease;
+    }
+
+    .sidebar .active {
+        width: 240px;
     }
 
     .sidebar .name-content .name {
         color: #fff;
+        height: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .sidebar .active .name-content .name {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .name-content .name .name-text {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .sidebar #btn {
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 6px;
+        font-size: 20px;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        line-height: 50px;
+        transform: translateX(-50%);
+    }
+
+    .sidebar .active #btn {
+        left: 90%;
+    }
+
+    .sidebar ul {
+        margin-top: 20px;
+    }
+
+    .sidebar ul li {
+        position: relative;
+        height: 50px;
+        width: 100%;
+        list-style: none;
+        margin: 0 5px;
+        line-height: 50px;
+    }
+
+    .sidebar ul li a {
+        color: #fff;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        transition: all 0.4s ease;
+        border-radius: 12px;
+    }
+
+    .sidebar ul li a:hover {
+        color: #8f1773;
+    background: #f321c2;
+    box-shadow: 0 0 10px #f321c2, 0 0 40px #f321c2, 0 0 80px #f321c2;
+    }
+
+    .sidebar ul li i {
+        height: 50px;
+        min-width: 50px;
+        border-radius: 12px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    .sidebar .links-name {
+        opacity: 0;
+        pointer-events: none;
+    }
+    .sidebar .active .links-name {
+        opacity: 1;
+        pointer-events: auto;
     }
 
     .nav-list {
