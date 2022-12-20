@@ -143,14 +143,10 @@ header ul li a:hover {
         top: 0;
         left: 0;
         height: 100%;
-        width: 78px;
+        width: 240px;
         background: #11101d;
         padding: 6px 14px;
         transition: all 0.5s ease;
-    }
-
-    .sidebar .active {
-        width: 240px;
     }
 
     .sidebar .name-content .name {
@@ -159,13 +155,6 @@ header ul li a:hover {
         width: 100%;
         display: flex;
         align-items: center;
-        opacity: 0;
-        pointer-events: none;
-    }
-
-    .sidebar .active .name-content .name {
-        opacity: 1;
-        pointer-events: auto;
     }
 
     .name-content .name .name-text {
@@ -176,7 +165,7 @@ header ul li a:hover {
     .sidebar #btn {
         color: #fff;
         position: absolute;
-        left: 50%;
+        left: 90%;
         top: 6px;
         font-size: 20px;
         height: 50px;
@@ -184,10 +173,6 @@ header ul li a:hover {
         text-align: center;
         line-height: 50px;
         transform: translateX(-50%);
-    }
-
-    .sidebar .active #btn {
-        left: 90%;
     }
 
     .sidebar ul {
@@ -224,15 +209,6 @@ header ul li a:hover {
         border-radius: 12px;
         line-height: 50px;
         text-align: center;
-    }
-
-    .sidebar .links-name {
-        opacity: 0;
-        pointer-events: none;
-    }
-    .sidebar .active .links-name {
-        opacity: 1;
-        pointer-events: auto;
     }
 
     .nav-list {
