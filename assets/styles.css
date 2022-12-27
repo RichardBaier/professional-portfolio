@@ -175,6 +175,10 @@ header ul li a:hover {
         transform: translateX(-50%);
     }
 
+    .sidebar #btn:hover {
+        cursor: pointer;
+    }
+
     .sidebar ul {
         margin-top: 20px;
     }
