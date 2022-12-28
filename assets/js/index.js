@@ -1,10 +1,15 @@
-window.onload = function () {
-  const hamburger = document.querySelector('.hamburger');
-  const mobileMenu = document.querySelector('.mobile-nav')
+let menuToggle = document.querySelector('.menuToggle');
+let navigation = document.querySelector('.navigation');
+let list = document.querySelectorAll('.list');
 
-hamburger.addEventListener('click', function () {
-  hamburger.classList.toggle('is-active');
-  mobileMenu.classList.toggle('is-active');
+menuToggle.onclick = function() {
+  navigation.classList.toggle('active');
+}
 
-});
-};
+function activeLink() {
+  list.forEach((item) => item.classList.remove('active'));
+  this.classList.add('active');
+}
+
+list.forEach((item) =>
+ item.addEventListener('click', activeLink));
