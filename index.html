@@ -4,75 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
     <title>Rick Baier</title>
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Rick Baier</a>
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="./projects.html">Projects</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Contact Me</a></li>
-        </ul>
+        <div class="container">
+            <h1>Rick Baier</h1>
+
+            <div class="menu">
+                <a href="#" class="link">Home</a>
+                <a href="#" class="link">About</a>
+                <a href="#" class="link">Projects</a>
+                <a href="#" class="link">Contact</a>
+            </div>
+
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
-    <section class="banner">
-        <div class="sidebar">
-            <div class="name-content">
-                <div class="name">
-                    <div class="name-text">Rick Baier</div>
-                </div>
-                <i class="fa-solid fa-bars" id="btn"></i>
-            </div>
-            <ul class="nav-list">
-                <li>
-                    <a href="./index.html">
-                        <i class="fa-solid fa-house"></i>
-                        <span class="links-name>">Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="./projects.html">
-                        <i class="fa-solid fa-computer"></i>
-                        <span class="links-name>">Projects</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-list"></i>
-                        <span class="links-name>">Skills</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="./contact.html">
-                        <i class="fa-solid fa-phone"></i>
-                        <span class="links-name>">Contact Me</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="about-me">
-            <div id="about-card" data-tilt>
-                <div class="content">
-                    <h1>About Me</h1>
-                    <img src="./assets/img/profile.png">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <nav class="mobile-nav">
+        <a href="#" class="link">Home</a>
+        <a href="#" class="link">About</a>
+        <a href="#" class="link">Projects</a>
+        <a href="#" class="link">Contact</a>
+    </nav>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="./assets/js/vanila-tilt.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>
 </html>

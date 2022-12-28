@@ -1,6 +1,10 @@
-let btn = document.querySelector("#btn");
-let sidebar = document.querySelector(".sidebar");
+window.onload = function () {
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.querySelector('.mobile-nav')
 
-btn.onclick = function() {
-  sidebar.classList.toggle("active");
-}
+hamburger.addEventListener('click', function () {
+  hamburger.classList.toggle('is-active');
+  mobileMenu.classList.toggle('is-active');
+
+});
+};
