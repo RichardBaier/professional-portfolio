@@ -358,11 +358,11 @@ body {
 @media (max-width: 400px) {
     .container {
         width: 250px;
-        height: 500px;
+        height: 400px;
     }
 
     .glass {
-        height: 500px;
+        height: 400px;
     }
 
     .container h1 {
@@ -371,6 +371,6 @@ body {
 
     .box {
         width: 250px;
-        height: 500px;
+        height: 400px;
     }
 }
