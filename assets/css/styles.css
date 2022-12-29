@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * {
     margin: 0;
@@ -17,6 +18,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .navigation {
@@ -217,17 +219,44 @@ body {
 }
 
 .container {
-    position: absolute;
+    position: relative;
     width: 900px;
-    height: 600px;
+    height: 90vh;
     margin-left: 150px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff
+}
+
+.home-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+    color:#fff
+}
+
+.home-card h1 {
+    font-size: 60px;
+    margin-bottom: 40px;
+    font-family: 'Press Start 2P';
+}
+
+.home-card p {
+    margin-left: 40px;
+    margin-right: 30px;
 }
 
 .box {
-    position: relative;
+    position: absolute;
     width: 900px;
-    height: 600px;
-    margin-left: 150px;
+    height: 90vh;
+    /* margin-left: 150px; */
     background: rgba(0,0,0,0.75);
     border-radius: 20px;
     display: flex;
@@ -265,19 +294,21 @@ body {
 
 /* Glass Effect */
 .glass {
+    width: 900px;
+    height: 90vh;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
     border:rgba(255, 255, 255, 0.18);
     box-shadow: 0px 8px 32px rgba(0,0,0, 0.38);
-    z-index: 2;
+    z-index: 4;
 }
 
 .box span {
     position: absolute;
     inset: 5px;
-    border-radius: 16px;
+    border-radius: 20px;
     background: var(--bg);
     z-index: 1;
 }
@@ -287,6 +318,10 @@ body {
     .container {
         width: 600px;
         height: 400px;
+    }
+
+    .container h1 {
+        font-size: 40px;
     }
 
     .box {
@@ -302,6 +337,10 @@ body {
         height: 600px;
     }
 
+    .container h1 {
+        font-size: 30px;
+    }
+
     .box {
         margin-left: 100px;
         width: 400px;
@@ -312,6 +351,10 @@ body {
 @media (max-width: 400px) {
     .container {
         width: 250px;
+    }
+
+    .container h1 {
+        font-size: 20px;
     }
 
     .box {
