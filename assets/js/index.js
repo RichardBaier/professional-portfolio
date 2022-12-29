@@ -13,3 +13,8 @@ function activeLink() {
 
 list.forEach((item) =>
  item.addEventListener('click', activeLink));
+
+ VanillaTilt.init(document.querySelector('.home-card'), {
+  max: 25,
+  speed: 400
+ });
