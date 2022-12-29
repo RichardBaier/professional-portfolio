@@ -373,4 +373,9 @@ body {
         width: 250px;
         height: 400px;
     }
+
+    .box::after {
+        width: 500px;
+        height: 500px;
+    }
 }
