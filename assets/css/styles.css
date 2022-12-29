@@ -14,6 +14,9 @@
 body {
     min-height: 100vh;
     background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navigation {
@@ -25,6 +28,7 @@ body {
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+    z-index: 1000;
 }
 
 .navigation.active {
@@ -105,7 +109,6 @@ body {
     top: -28px;
     background: transparent;
     border-bottom-right-radius: 20px;
-    box-shadow: 6px 5px 0 5px var(--bg);
     transform: scale(0);
     transform-origin: bottom right;
     transition: 0.5s;
@@ -125,7 +128,6 @@ body {
     bottom: -28px;
     background: transparent;
     border-top-right-radius: 20px;
-    box-shadow: 6px -3px 0 3px var(--bg);
     transform: scale(0);
     transform-origin: bottom right;
     transition: 0.5s;
@@ -212,4 +214,107 @@ body {
 
 .navigation ul li.active a .text {
     color: #fff;
+}
+
+.container {
+    position: absolute;
+    width: 900px;
+    height: 600px;
+    margin-left: 150px;
+}
+
+.box {
+    position: relative;
+    width: 900px;
+    height: 600px;
+    margin-left: 150px;
+    background: rgba(0,0,0,0.75);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    width: 1100px;
+    height: 1100px;
+    background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+    animation: animate 4s linear infinite;
+}
+.box::after {
+    content: '';
+    position: absolute;
+    width: 1100px;
+    height: 1100px;
+    background-image: conic-gradient(transparent, transparent, transparent, #d400d4);
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Glass Effect */
+.glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:rgba(255, 255, 255, 0.18);
+    box-shadow: 0px 8px 32px rgba(0,0,0, 0.38);
+    z-index: 2;
+}
+
+.box span {
+    position: absolute;
+    inset: 5px;
+    border-radius: 16px;
+    background: var(--bg);
+    z-index: 1;
+}
+
+
+@media (max-width: 1100px) {
+    .container {
+        width: 600px;
+        height: 400px;
+    }
+
+    .box {
+        width: 600px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-left: 100px;
+        width: 400px;
+        height: 600px;
+    }
+
+    .box {
+        margin-left: 100px;
+        width: 400px;
+        height: 600px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 250px;
+    }
+
+    .box {
+        width: 250px;
+    }
 }
