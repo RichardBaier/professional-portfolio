@@ -14,11 +14,56 @@
 
 body {
     min-height: 100vh;
-    background: var(--bg);
+    background: #08090b;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.background {
+    position: absolute;
+    width: 100vw;
+    height: 525vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#000, #d400d4, #000);
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.background span {
+    position: relative;
+    background: var(--bg);
+    display: block;
+    width: calc(10vw - 2px);
+    height: calc(10vh - 2px);
+    z-index: 2;
+    transition: 1.5s;
+}
+
+.background span:hover {
+    background: #d400d4;
+    transition: 0s;
 }
 
 .navigation {
@@ -237,7 +282,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index: 3;
+    z-index: 4;
     color:#fff
 }
 
@@ -254,6 +299,7 @@ body {
 
 .box {
     position: absolute;
+    z-index: 3;
     width: 900px;
     height: 90vh;
     /* margin-left: 150px; */
@@ -271,7 +317,7 @@ body {
     width: 1100px;
     height: 1100px;
     background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
-    animation: animate 4s linear infinite;
+    animation: rotate 4s linear infinite;
 }
 .box::after {
     content: '';
@@ -279,11 +325,11 @@ body {
     width: 1100px;
     height: 1100px;
     background-image: conic-gradient(transparent, transparent, transparent, #d400d4);
-    animation: animate 4s linear infinite;
+    animation: rotate 4s linear infinite;
     animation-delay: -2s;
 }
 
-@keyframes animate {
+@keyframes rotate {
     0% {
         transform: rotate(0deg);
     }
@@ -311,6 +357,80 @@ body {
     border-radius: 20px;
     background: var(--bg);
     z-index: 1;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card {
+    position: relative;
+    background: #000;
+    border: 3px solid #00ccff;
+    border-radius: 20px;
+    width: 280px;
+}
+
+.card-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.card .name-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.name-skills .name {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.name-skills .skills {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.card .image {
+    width: 200px;
+    height: 140px;
+}
+
+.card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card .button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 110%;
+}
+
+.card .button button {
+    background: #00ccff;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card .button button:hover {
+    background: #fff;
 }
 
 
