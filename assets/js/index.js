@@ -2,6 +2,7 @@ let menuToggle = document.querySelector('.menuToggle');
 let navigation = document.querySelector('.navigation');
 let list = document.querySelectorAll('.list');
 var x = window.matchMedia("(min-width: 1100px)")
+var form = document.getElementById("my-form");
 
 menuToggle.onclick = function() {
   navigation.classList.toggle('active');
@@ -56,20 +57,34 @@ function myFunction(x) {
   }
 }
 
-function sendEmail() {
-  Email.send({
-    SecureToken: "28c7270f-d1fe-4736-8609-394f1e465151",
-    To : 'bearbaier@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : "Portfolio Contact",
-    Body : "Name: " + document.getElementById("firstName").value + document.getElementById("lastName").value 
-    + "<br> Email: " + document.getElementById("email").value 
-    + "<br> Mobile: " + document.getElementById("mobile").value
-    + "<br> Message: " + document.getElementById("message").value
-}).then(
-  message => alert("Message Sent Successfully")
-);
-};
+async function handleSubmit(event) {
+  event.preventDefault();
+  var status = document.getElementById("my-form-status");
+  var data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+        'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      status.innerHTML = "Thanks for your submission!";
+      form.reset()
+    } else {
+      response.json().then(data => {
+        if (Object.hasOwn(data, 'errors')) {
+          status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+        } else {
+          status.innerHTML = "Oops! There was a problem submitting your form"
+        }
+      })
+    }
+  }).catch(error => {
+    status.innerHTML = "Oops! There was a problem submitting your form"
+  });
+}
+form.addEventListener("submit", handleSubmit)
 
 myFunction(x);
 x.addListener(myFunction);
