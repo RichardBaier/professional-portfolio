@@ -2109,9 +2109,53 @@
 
     </div>
     <div class="container glass" id="contact-me">
-
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h2>Contact Me</h2>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" id="firstName" name="" required="required">
+                    <span class="text">First Name</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" id="lastName" name="" required="required">
+                    <span class="text">Last Name</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" id="email" name="" required="required">
+                    <span class="text">Email</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" id="mobile" name="" required="required">
+                    <span class="text">Mobile</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputBox">
+                    <textarea class="textarea" id="message" required="required"></textarea>
+                    <span class="text">Type your message here...</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="row100">
+                <div class="col">
+                    <input type="submit" value="send">
+                </div>
+            </div>
+        </form>
     </div>
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>

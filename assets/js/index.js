@@ -56,5 +56,20 @@ function myFunction(x) {
   }
 }
 
+function sendEmail() {
+  Email.send({
+    SecureToken: "28c7270f-d1fe-4736-8609-394f1e465151",
+    To : 'bearbaier@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "Portfolio Contact",
+    Body : "Name: " + document.getElementById("firstName").value + document.getElementById("lastName").value 
+    + "<br> Email: " + document.getElementById("email").value 
+    + "<br> Mobile: " + document.getElementById("mobile").value
+    + "<br> Message: " + document.getElementById("message").value
+}).then(
+  message => alert("Message Sent Successfully")
+);
+};
+
 myFunction(x);
 x.addListener(myFunction);
