@@ -292,9 +292,30 @@ body {
     font-family: 'Press Start 2P';
 }
 
-.home-card p {
-    margin-left: 40px;
-    margin-right: 30px;
+.social-links {
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.home-card i {
+    font-size: 60px;
+    color:#00ccff;
+}
+
+.home-card i:hover {
+    color: #fff;
+}
+
+.home-card .home-icon:hover {
+    color: #fff;
+}
+
+.home-card .home-icon {
+    font-size: 60px;
+    color: #00ccff;
 }
 
 .box {
@@ -357,6 +378,24 @@ body {
     border-radius: 20px;
     background: var(--bg);
     z-index: 1;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.about-content img {
+    width: 400px;
+    height: 400px;
+}
+
+.about-content p {
+    margin-left: 40px;
+    margin-right: 30px;
 }
 
 #projects {
@@ -451,6 +490,29 @@ body {
     width: 26px;
     background: #00ccff;
     border-radius: 25px;
+}
+
+#skills {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.front-icons {
+    display: flex;
+}
+
+.back-icons {
+    display: flex;
+}
+
+.back-icons img {
+    width: 30px;
+    height: 30px;
 }
 
 #contact-me {
